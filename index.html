@@ -1,42 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NYT Practice</title>
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
+    <link
+      rel="stylesheet"
+      href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+      integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
     <div class="container">
-        <br>
-        <h1>New York Times Article Search</h1>
-        <br>
-        <form id="search">
-            <label for="term">Headlines</label>
-            <input type="text" id="term-input">
-            <br>
-            <br>
-            <!-- <label for="year-start">Year start</label>
-            <input type="text" id="year-start"><br>
-            <label for="year-end">Year end</label>
-            <input type="text" id="year-end"><br> -->
+      <br />
+      <h1>New York Times Article Search</h1>
+      <br />
+      <form id="search">
+        <label for="term">Headlines</label>
+        <input type="text" id="term-input" />
+        <br />
+        <br />
+        <label for="year-start">Year start</label>
+        <input type="text" placeholder="YYYYMMDD" id="year-start" /><br />
+        <label for="year-end">Year end</label>
+        <input type="text" placeholder="YYYYMMDD" id="year-end" /><br />
 
-            <!-- Button triggers search request-->
-            <button id="search-button" class="btn btn-warning">Search</button>
-            <!-- <input id="search-button" type="submit" value="Search Article"> -->
-        </form>
-        <br>
-        <div id="search-results" class="row"></div>
+        <!-- Button triggers search request-->
+        <button id="search-button" class="btn btn-warning">Search</button>
+        <!-- <input id="search-button" type="submit" value="Search Article"> -->
+      </form>
+      <br />
+      <div id="search-results" class="row"></div>
     </div>
+    <script src="//ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script
-  src="https://code.jquery.com/jquery-3.3.1.min.js"
-  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
-  crossorigin="anonymous"></script>
+      src="https://code.jquery.com/jquery-3.3.1.min.js"
+      integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+      crossorigin="anonymous"
+    ></script>
     <script src="app.js"></script>
-
-
-
-</body>
+  </body>
 </html>
