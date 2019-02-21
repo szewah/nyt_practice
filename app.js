@@ -1,45 +1,36 @@
 $("button").on("click", function() {
   event.preventDefault();
+
+  var today = new Date();
+  // current date
+  var currentDate =
+    today.getFullYear() + "0" + (today.getMonth() + 1) + today.getDate();
   var searchTerms = $("#term-input").val();
   var startDate = $("#year-start").val();
   var endDate = $("#year-end").val();
 
-  var queryURL1 =
-    // "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
-    // searchTerms +
-    // "&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf&begin_date=" +
-    // startDate +
-    // "&end_date=" +
-    // endDate;
+  if (startDate.length < 5 && startDate.length > 0) {
+    startDate = startDate + "0101";
+    console.log(startDate);
+    endDate = endDate + "0101";
+  } else if (startDate.length === 0) {
+    startDate = currentDate;
+    endDate = currentDate;
+    console.log("Current Dtae = " + currentDate);
+  }
 
-    "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+  var queryURL =
+    "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
     searchTerms +
-    "&begin_date=" +
+    "&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf&begin_date=" +
     startDate +
     "&end_date=" +
-    endDate +
-    "&facet_filter=true&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf";
+    endDate;
 
-  var queryURL2 =
-    "http://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
-    searchTerms +
-    "&begin_date=20190219&end_date=20190220" +
-    "&facet_filter=true&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf";
-
-  var params = {
-    type: "GET"
-  };
-  if (startDate === "" && endDate === "") {
-    params.url = queryURL2;
-  } else {
-    params.url = queryURL1;
-  }
-  //   $.ajax(params);
-  //   $.ajax({
-  //     // method: "GET",
-  //     // url:  queryURL1;
-  //   })
-  $.ajax(params).then(function(response) {
+  $.ajax({
+    method: "GET",
+    url: queryURL
+  }).then(function(response) {
     $("#search-results").empty();
     console.log(response);
     var results = response.response.docs;
