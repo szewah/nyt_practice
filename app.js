@@ -12,7 +12,7 @@ $("button").on("click", function() {
   if (startDate.length < 5 && startDate.length > 0) {
     startDate = startDate + "0101";
     console.log(startDate);
-    endDate = endDate + "0101";
+    endDate = endDate + "1231";
   } else if (startDate.length === 0) {
     startDate = currentDate;
     endDate = currentDate;
@@ -36,7 +36,7 @@ $("button").on("click", function() {
     var results = response.response.docs;
 
     for (var i = 0; i < results.length; i++) {
-      var resultsDiv = $("<div  class='card col-2 p-2'>");
+      var resultsDiv = $("<div  class='card col-md-3 p-2'>");
       var resultsImg = $("<img class='card-img-top img-fluid img'>").attr(
         "src",
         "https://static01.nyt.com/" + results[i].multimedia[0].url
