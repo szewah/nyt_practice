@@ -16,7 +16,7 @@ $("button").on("click", function() {
   } else if (startDate.length === 0) {
     startDate = currentDate;
     endDate = currentDate;
-    console.log("Current Dtae = " + currentDate);
+    console.log("Current Date = " + currentDate);
   }
 
   var queryURL =
@@ -36,8 +36,8 @@ $("button").on("click", function() {
     var results = response.response.docs;
 
     for (var i = 0; i < results.length; i++) {
-      var resultsDiv = $("<div class='card col-md-4'>");
-      var resultsImg = $("<img class='card-img-top'>").attr(
+      var resultsDiv = $("<div  class='card col-2 p-2'>");
+      var resultsImg = $("<img class='card-img-top img-fluid img'>").attr(
         "src",
         "https://static01.nyt.com/" + results[i].multimedia[0].url
       );

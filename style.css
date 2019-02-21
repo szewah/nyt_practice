@@ -1,12 +1,42 @@
 h1 {
-    color: green;
+  color: green;
+  font-family: cursive;
+  font-size: 80px;
 }
 
 .card {
-    margin: 5px;
+  margin: 5px;
 }
 
-/* .img {
-    width: 150px;
-    height: 50px;
-} */
+.heading,
+.year {
+  padding-top: 20px;
+  color: green;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/images.jpeg");
+  height: 60%;
+  margin-bottom: 40px;
+}
+
+#search-button {
+  margin-top: 20px;
+  margin-left: 140px;
+}
+
+#search-results {
+  margin-left: 80px;
+}
