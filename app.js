@@ -4,8 +4,12 @@ $("button").on('click', function() {
     var searchTerms = $("#term-input").val();
     // var startDate = $("#year-start").val();
     // var endDate = $("#year-end").val();
-    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
-    searchTerms + "&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf";
+    // var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" + 
+    // searchTerms + "&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf";
+
+    var queryURL = "https://api.nytimes.com/svc/search/v2/articlesearch.json?q=" +
+    searchTerms + "&api-key=3NHzwAZ0W4vY1w2LtontARaL9mG1GHDf"
+    console.log(queryURL);
     
     $.ajax({
         url: queryURL,
@@ -18,13 +22,14 @@ $("button").on('click', function() {
 
         for (var i = 0; i < results.length; i++) {
             var resultsDiv = $("<div class='card col-md-4'>");
-            var resultsImg = $("<img class='card-img-top'>").attr("src", "https://static01.nyt.com/" + results[i].multimedia[0].url);
+            var resultsImg = $("<img class='card-img-top img-fluid'>").attr("src", "https://static01.nyt.com/" + results[i].multimedia[1].url);
             resultsImg.attr("alt", results[i].headline.main);
             var resultsBody = $("<div class='card-body'>");
             var resultsHeadline = $("<h6 class='title'>").text(results[i].headline.main);
             var resultsSnippet = $("<p class='card-text'>").text(results[i].snippet);
             var readMore = $("<a class='card-link btn btn-warning'>").text('Read more');
             readMore.attr("href", results[i].web_url);
+            readMore.attr("target", "_blank");
             resultsBody.append(resultsHeadline);
             resultsBody.append(resultsSnippet);
             resultsBody.append(readMore);

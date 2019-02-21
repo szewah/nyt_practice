@@ -1,12 +1,23 @@
 h1 {
     color: green;
+    font: helvetica;
+    font-weight: bold;
+    margin-bottom: 10px;
 }
 
-.card {
-    margin: 5px;
+.jumbotron {
+    /* background-image: url("https://www.thoughtco.com/thmb/0QMbBZJ2cmY4X4fYDLT5z_6bf3g=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Brooklyn-Bridge-catwalk-2700gty-56a488545f9b58b7d0d76f17.jpg");
+    background-repeat: no-repeat;
+    background-position: center;  */
+    background-color: lightgrey;
 }
 
-/* .img {
-    width: 150px;
-    height: 50px;
-} */
+.input-group{
+    padding-top: 10px;
+    width: 30%;
+    margin: auto;
+}
+
+span {
+    width: 100px;
+}

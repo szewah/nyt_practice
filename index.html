@@ -9,25 +9,35 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div class="container">
-        <br>
-        <h1>New York Times Article Search</h1>
-        <br>
-        <form id="search">
-            <label for="term">Headlines</label>
-            <input type="text" id="term-input">
-            <br>
-            <br>
-            <!-- <label for="year-start">Year start</label>
-            <input type="text" id="year-start"><br>
-            <label for="year-end">Year end</label>
-            <input type="text" id="year-end"><br> -->
-
+    <div class="jumbotron jumbotron-fluid text-center">
+        <div class="container">
+            <h1 class="display-4">New York Times Article Search</h1>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Headline</span>
+                </div>
+                <input placeholder="Search Term" id="term-input" type="text" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Year Start</span>
+                </div>
+                <input placeholder="YYYYMMDD" id="year-start" type="date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
+            <div class="input-group mb-3">
+                <div class="input-group-prepend">
+                    <span class="input-group-text" id="inputGroup-sizing-default">Year End</span>
+                </div>
+                <input placeholder="YYYYMMDD" id="year-end" type="date" class="form-control" aria-label="Default" aria-describedby="inputGroup-sizing-default">
+            </div>
             <!-- Button triggers search request-->
             <button id="search-button" class="btn btn-warning">Search</button>
             <!-- <input id="search-button" type="submit" value="Search Article"> -->
-        </form>
-        <br>
+        </div>
+    </div>
+    
+    <br>
+    <div class="container">
         <div id="search-results" class="row"></div>
     </div>
     <script
