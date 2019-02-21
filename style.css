@@ -4,10 +4,6 @@ h1 {
   font-size: 80px;
 }
 
-.card {
-  margin: 5px;
-}
-
 .heading,
 .year {
   padding-top: 20px;
@@ -34,9 +30,31 @@ html {
 
 #search-button {
   margin-top: 20px;
-  margin-left: 140px;
+  /* margin-left: 140px; */
 }
 
-#search-results {
-  margin-left: 200px;
+@media (max-width: 640px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .heading,
+  .year {
+    padding-top: 10px;
+    font-size: 20px;
+  }
+
+  .wrapper {
+    height: 50%;
+    margin-bottom: 20px;
+  }
+
+  #search-button {
+    margin-top: 10px;
+    margin-left: 70px;
+  }
+
+  .card {
+    margin: 0px;
+  }
 }

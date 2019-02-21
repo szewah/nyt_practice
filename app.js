@@ -36,7 +36,7 @@ $("button").on("click", function() {
     var results = response.response.docs;
 
     for (var i = 0; i < results.length; i++) {
-      var resultsDiv = $("<div  class='card col-md-3 p-2'>");
+      var resultsDiv = $("<div  class='col-lg-3'>");
       var resultsImg = $("<img class='card-img-top img-fluid img'>").attr(
         "src",
         "https://static01.nyt.com/" + results[i].multimedia[0].url

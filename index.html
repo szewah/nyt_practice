@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>NYT Practice</title>
+     <!-- Normalized CSS -->
+     <link
+     rel="stylesheet"
+     type="text/css"
+     href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+   />
     <link
       rel="stylesheet"
       href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -18,7 +24,7 @@
       <h1 class="header">New York Times Article Search</h1>
       <br />
 
-      <form id="search">
+      <form id="search" class="container container-fluid">
         <label for="term" class='heading pr-2 pb-2'>Headlines</label>
         <input type="text" id="term-input" /></br>
         <label for="year-start" class="year pr-2">Year start</label> 
@@ -31,8 +37,9 @@
         <!-- <input id="search-button" type="submit" value="Search Article"> -->
       </form>
     </div>
+    <div class="container">
     <div id="search-results" class="row"></div>
-
+  </div>
     <!-- <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> -->
     <script
       src="https://code.jquery.com/jquery-3.3.1.min.js"
