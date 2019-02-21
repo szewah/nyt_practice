@@ -1,4 +1,5 @@
 h1 {
+<<<<<<< HEAD
     color: green;
     font: helvetica;
     font-weight: bold;
@@ -21,3 +22,66 @@ h1 {
 span {
     width: 100px;
 }
+=======
+  color: green;
+  font-family: cursive;
+  font-size: 80px;
+}
+
+.heading,
+.year {
+  padding-top: 20px;
+  color: green;
+  font-size: 30px;
+  font-weight: bold;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+}
+
+.wrapper {
+  position: relative;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-image: url("./images/images.jpeg");
+  height: auto;
+  margin-bottom: 40px;
+}
+
+#search-button {
+  margin-top: 20px;
+  margin-bottom: 20px;
+  /* margin-left: 140px; */
+}
+
+@media (max-width: 640px) {
+  h1 {
+    font-size: 40px;
+  }
+
+  .heading,
+  .year {
+    padding-top: 5px;
+    font-size: 20px;
+  }
+
+  .wrapper {
+    height: 60%;
+    margin-bottom: 20px;
+  }
+
+  #search-button {
+    margin-top: 2px;
+    margin-left: 70px;
+    margin-bottom: 0;
+  }
+
+  .card {
+    margin: 0px;
+  }
+}
+>>>>>>> e294e8821cb2b19ae503e526606cd34e8c35711e
