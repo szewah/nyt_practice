@@ -1,87 +1,69 @@
 h1 {
-<<<<<<< HEAD
-    color: green;
-    font: helvetica;
-    font-weight: bold;
+    color: black;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 400;
     margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, .6);
+    width: 100%;
+    font-size: 70px;
+}
+
+.container {
+  margin-top: 35px;
 }
 
 .jumbotron {
-    /* background-image: url("https://www.thoughtco.com/thmb/0QMbBZJ2cmY4X4fYDLT5z_6bf3g=/768x0/filters:no_upscale():max_bytes(150000):strip_icc():format(webp)/Brooklyn-Bridge-catwalk-2700gty-56a488545f9b58b7d0d76f17.jpg");
+    background-position: center;
     background-repeat: no-repeat;
-    background-position: center;  */
-    background-color: lightgrey;
+    background-size: cover;
+    background-image: url("./images/images.jpeg");
+    height: 65%;
+    margin-bottom: 40px;
 }
 
 .input-group{
     padding-top: 10px;
     width: 30%;
     margin: auto;
+    font-family: 'Lato', sans-serif;
+}
+
+.input-group-text {
+  color: black;
+  text-transform: uppercase;
+  font-size: 16px;
 }
 
 span {
-    width: 100px;
-}
-=======
-  color: green;
-  font-family: cursive;
-  font-size: 80px;
-}
-
-.heading,
-.year {
-  padding-top: 20px;
-  color: green;
-  font-size: 30px;
-  font-weight: bold;
-}
-
-body,
-html {
-  height: 100%;
-  margin: 0;
-}
-
-.wrapper {
-  position: relative;
-  background-position: center;
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-image: url("./images/images.jpeg");
-  height: auto;
-  margin-bottom: 40px;
+    display: block;
+    width: 150px;
+    justify-content: center;
+    padding-left: 50px;
 }
 
 #search-button {
   margin-top: 20px;
   margin-bottom: 20px;
-  /* margin-left: 140px; */
+  margin-left: auto;
+  margin-right: auto;
+  background-color: rgba(255, 255, 255, 1);
+  border: 1px solid  darkslategray;
+  text-transform: uppercase;
 }
 
-@media (max-width: 640px) {
-  h1 {
-    font-size: 40px;
-  }
-
-  .heading,
-  .year {
-    padding-top: 5px;
-    font-size: 20px;
-  }
-
-  .wrapper {
-    height: 60%;
-    margin-bottom: 20px;
-  }
-
-  #search-button {
-    margin-top: 2px;
-    margin-left: 70px;
-    margin-bottom: 0;
-  }
-
-  .card {
-    margin: 0px;
-  }
+#search-button:hover {
+  background-color: #262626;
+  color: white;
 }
->>>>>>> e294e8821cb2b19ae503e526606cd34e8c35711e
+
+.card-link {
+  background-color: black;
+  color: white;
+  text-transform: uppercase;
+}
+
+.card-link:hover {
+  opacity: .5;
+  color: white;
+}
+

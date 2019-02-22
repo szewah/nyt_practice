@@ -47,7 +47,7 @@ $("button").on("click", function() {
           results[i].headline.main
         );
         var resultsSnippet = $("<p class='card-text'>").text(results[i].snippet);
-        var readMore = $("<a class='card-link btn btn-warning'>").text(
+        var readMore = $("<a class='card-link btn'>").text(
           "Read more"
         );
         readMore.attr("href", results[i].web_url);
